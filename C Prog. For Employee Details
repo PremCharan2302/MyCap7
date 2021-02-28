@@ -1,0 +1,67 @@
+#include<stdio.h>
+
+struct employee
+
+{
+
+int eno;
+
+  float esal;
+
+char ename[20];
+
+char edpt[10];
+
+}E;
+
+main()
+
+{
+
+void read(struct employee*);
+
+void print(struct employee);
+
+read(&E);
+
+print(E);
+
+}
+
+void read(struct employee *A)
+
+{
+
+printf("Enter employee no");
+
+scanf("%d",&A->eno);
+
+printf("Enter employee sal");
+
+scanf("%f",&A->esal);
+
+getchar();
+
+printf("Enter employee name");
+
+gets(A->ename);
+
+printf("Enter employee dpt.");
+
+scanf("%s",&A->edpt);
+
+}
+
+void print(struct employee B)
+
+{
+
+printf("\nEmployee no. is %d",B.eno);
+
+printf("\nEmployee name is %s",B.ename);
+
+printf("\nEmployee salary is %f",B.esal);
+
+printf("\nEmployee department is %s",B.edpt);
+
+}
